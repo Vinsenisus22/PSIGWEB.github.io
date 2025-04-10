@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UTS</title>
+    <!-- Tambahkan tautan ke Bootstrap CSS dan Leaflet jS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
+    <!-- Leaflet Control Geocoder -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder@1.13.0/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet-control-geocoder@1.13.0/dist/Control.Geocoder.js"></script>
+   
+
+    <style>
+        html,
+        body,
+        section {
+          position: relative;
+          height: 100%;
+          background-image: url("");
+        }
+  
+        html {
+          scroll-behavior: smooth;
+        }
+  
+        h1 {
+        }
+  
+        #map {
+          width: 750px;
+          height: 500px;
+          margin-top: 30px;
+        }
+      </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #619fc0">
+      <a class="navbar-brand" href="#"></a>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2bnWTe1VBiJvDVPeiviJ5i2wXKd-LKARptg&s" alt="Bootstrap" width="30" height="30" />
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Esai <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Website</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tabel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Validasi Pekerjaan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Peta Leaflet.JS</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Konten Utama -->
+    <div class="container">
+        <br />
+        <br />
+        <br />
+    </div>
+    <div class="custom-container">
+      <h1 style="text-align: center;">UJIAN TENGAH SEMESTER PRAKTIKUM SIG WEB</h1>
+      <br />
+      <h2>Esai Materi Praktikum SIG WEB</h2>
+      <p style="text-align: justify;">
+        Tulisan ini berisi penjelasan mengenai materi perkuliahan praktikum SIG Web dari minggu ke-1 hingga minggu ke-7. Mata Kuliah Praktikum Sistem Informasi Geografi Berbasis Web membahas mengenai bagaimana data dan informasi geospasial ditampilkan melalui internet baik dengan platform desktop, mobile, maupun media lainnya. Materi mata kuliah ini dimulai dari pembahasan mengenai cara kerja internet dan halaman web, konsep dan cara kerja client server pada WebGIS, arsitektur WebGIS, serta desain dan evaluasi WebGIS. Praktikum SIG WEB merupakan salah satu mata kuliah pilihan jurusan Teknik Geodesi Universitas Gadjah Mada. Berikut beberapa materi yang telah dipelajari selama praktikum dari minggu ke-1 hingga minggu ke-7.
+      </p>
+      <br />
+      <h3>Pengantar SIG Web</h3>
+      <p style="text-align: justify;"><b>Pengantar SIG Web</b> materi ini berisi penjelasan mengenai capaian kompetinsi praktikum, materi-materi yang akan dipelajari. Internet menjadi syarat untuk menghubungkan semua perangkat elektronik di dunia, melalui website kita dapat membuka an menyimpan dan mendapati file HTML. Halaman web pada alamat yang sama dapat dipangil dari berbagai perangkat yang berbeda. Sebuah halaman web juga memiliki tampilan berbeda jika dibuka pada jenis perangkat berbeda.
+        </p>
+        <br />
+      <h3>Minggu ke-1 dan Minggu ke-2 - HTML, CSS, dan WIX</h3>
+      <p style="text-align: justify;"><b>HTML adalah</b>  bahasa markup yang digunakan untuk membuat struktur dasar halaman web. HTML berfungsi sebagai dasar hampir semua halaman web di internet dan mencakup elemen dasar seperti teks, gambar, tautan, daftar, formulir, dan lainnya.
+        </p>
+        <p style="text-align: justify;"><b>CSS adalah</b>  bahasa yang digunakan untuk mengatur tampilan dan gaya (style) elemen yang telah ditentukan dalam HTML. Dengan CSS, pengembang web dapat mengontrol warna, font, tata letak, ukuran, dan elemen desain lainnya pada halaman web dengan lebih mudah dan fleksibel tanpa harus mengubah semua elemen halaman.</p>
+        <p style="text-align: justify;"><b>Wix adalah</b>  sebuah platform pembuatan situs web yang memungkinkan orang membuat situs web mereka sendiri tanpa tahu banyak tentang pemrograman atau desain web. Untuk membuat halaman web, pengguna dapat mengunduh dan mengedit templete web yang sudah dibuat di Wix. Dalam praktikum materi ini, dibuat sebuah web dengan HTML dan CSS sederhana. Selain itu, dilakukan pembuatan <i>Curiculum Vitae</i> dengan menggunakan website WIX. </p>
+      <br />
+      <h3>Minggu ke-3 - JavaScript</h3>
+      <p>
+        <p style="text-align: justify;"><b>JavaScript</b> adalah bahasa pemrograman yang digunakan untuk mengembangkan situs web interaktif dan dinamis. Javascript merupakan salah satu bahasa pemrograman yang paling umum digunakan di seluruh dunia untuk pengembangan web. JavaScript memiliki peran penting dalam menjadikan halaman web lebih responsif, berfungsi, dan interaktif.Pada praktikum yang telah dilakukan, dilakukan pembuatan script menggunakan java script untuk menjawab lima soal yang telah diberikan.
+      </p>
+      <br />
+      <h3>Minggu ke-4 - Bootstrap Framework</h3>
+      <p>
+        <p style="text-align: justify;"><b>Bootstrap</b> adalah sebuah framework front-end sumber terbuka yang digunakan untuk memudahkan pengembangan situs web dan aplikasi web responsif <i> (responsive web)</i> yang menarik dan berfungsi dengan baik. 
+        Framework ini dibuat oleh Twitter dan kemudian dikelola oleh komunitas open source yang luas. 
+        Bootstrap menyediakan serangkaian alat, gaya, dan komponen yang siap pakai untuk mempercepat proses pengembangan web. 
+        Pada praktikum yang telah dilakukan, Bootstrap digunakan dalam pembuatan CV yang berisi biodata pribadi pemilik web serta link tugas yang telah dikerjakan selama praktikum SIG WEB. </p>
+      <br />
+      <h3>Minggu ke-5 dan Minggu ke-6 - Pebuatan WebGIS dengan Leaflet JS</h3>
+      <p style="text-align: justify;">
+        <b>Leaflet JS</b> adalah sebuah perpustakaan JavaScript open-source yang digunakan untuk membuat peta interaktif di situs web. Leaflet dirancang untuk menjadi ringan, cepat, mudah digunakan, dan memiliki fokus pada responsif dan kustomisasi. 
+        Leaflet merupakan salah satu perpustakaan peta yang paling populer di antara pengembang web dan digunakan secara luas dalam proyek-proyek yang memerlukan integrasi peta interaktif. 
+        Pada praktikum, telah dilakukan pembuatan peta interaktif menggunakan Leaflet JS dengan menambahkan beberapa plugin seperti plugin <i>geolocating</i> dan <i>print.</i></p>
+      <br />
+      <h3>Minggu ke-7 - Leaflet JS dan GeoJSON</h3>
+      <p style="text-align: justify;">
+        <b>GeoJSON</b> adalah sebuah feature yang dapat digunakan untuk menampilkan data spasial pada media web. LeafletJS dapat memanggil layer GeoJSON sebagai variabel dan ditambahkan pada peta. Pada praktikum ini dilakukan penambahan data dalam format shapefile ke dalam LeafleatJS, mengunakan shapefile daerah DIY.</p>
+    </div>
+    <style>
+        .custom-container {
+            max-width: 1000px;
+            margin: 0 auto; /* Untuk mengatur kontainer ke tengah */
+        }
+        </style>
+    <br />
+    <br />
+    <br />
+
+    <!--Link Geodesi-->
+    <div class="custom-container">
+        <div class="section-title">
+          <h2>Departemen Teknik Geodesi UGM</h2>
+        </div>
+    </div>
+    <style>
+        .custom-container {
+            max-width: 1000px;
+            margin: 0 auto; /* Untuk mengatur kontainer ke tengah */
+        }
+        </style>
+    <div class="row justify-content-center m-2">
+        <div class="col-md-4 mb-3">
+          <div class="card">
+            <img src="https://geodesi.ugm.ac.id/wp-content/uploads/sites/8/2017/08/SAVE_20170829_134406.jpeg" class="card-img-top border border-5 border-warning custom-size-50" alt="foto1" />
+            <div class="card-body">
+              <h5 class="card-title">Departemen Teknik Geodesi UGM |<i>Website</i>|</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Student</h6>
+              <p class="card-text">
+                Website Teknik Geodesi UGM berisiinformasi mengenai profil program studi, kemahasiswaan, riset dan publikasi, layanan, kelompok bidang keahlian,<i> post</i>,<i>event</i>, jurnal geodesi
+              </p>
+              <a href="https://geodesi.ugm.ac.id/" class="card-link">Website Departemen Teknik Geodesi</a>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+            <br />
+            <br />
+            <br />
+        </div>
+
+       
+
+    <!--Membuat Table yang berisi nama dan Nim-->
+    <div class="custom-container">
+        <div class="section-title">
+          <h2>Tabel Identitas</h2>
+        </div>
+    </div>
+    <div class="custom-container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col" class="align-middle text-center" style="background-color: #b70cdd">NAMA</th>
+                    <th scope="col"class="align-middle text-center" style="background-color: #b70cdd">NIM</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="align-middle text-center" style="color: #140ded">Vinsensius Budi Pranata</td>
+                    <td class="align-middle text-center" style="color: #140ded">21/478969/TK/52782</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <br />
+        <br />
+        <br />
+    </div>
+    <style>
+        .custom-container {
+            max-width: 1000px;
+            margin: 0 auto; 
+        }
+        </style>
+
+
+    <!--Membuat formulir validasi pekerjaan-->
+    <div class="custom-container">
+        <h2>Validasi Pekerjaan Selesai</h2>
+        <p>Mengisikan password anda dibawah untuk menvalidasi pekerjaan anda telah selesai!</p>
+        <form id="jobForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password">
+                <small class="text-danger" id="errorText"></small>
+            </div>
+            <button type="submit" class="btn btn-primary">Validasi</button>
+        </form>
+    </div>
+    <div class="container">
+        <br />
+        <br />
+        <br />
+    </div>
+    <style>
+        .custom-container {
+            max-width: 1000px;
+            margin: 0 auto; 
+        }
+        </style>
+    
+    <script>
+    function validateForm() {
+        var password = document.getElementById('password').value;
+    
+        if (password === 'Selesai') {
+            return true; 
+        } else {
+            document.getElementById('errorText').textContent = 'Password tidak valid. Harap masukkan pasword yang benar!';
+            return false; 
+        }
+    }
+    </script>
+
+    <!--Membuat peta yang menunjuuan 5 fakultas di UGM-->
+    <div class="custom-container">
+        <div class="section-title">
+          <h2>Peta 5 Fakultas di UGM</h2>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <center>
+            <div id="map"></div>
+        </center>
+        <script>
+            var bgnIcon = L.icon({
+              iconUrl: "ikon_fakultas.png",
+              iconSize: [50, 50],
+              iconAnchor: [20, 50],
+              popupAnchor: [0, 0],
+            });
+      
+            var Biologi = L.marker([-7.765456674868396, 110.37664354686186], { icon: bgnIcon }).bindPopup(
+                '<center><img src="https://biologi.ugm.ac.id/wp-content/uploads/sites/11/2019/06/DSC_0007.jpg" width="300px" height="200px" title="Fakultas Biologi" alt="Fakultas Biologi UGM"></center><h3>Fakultas Biologi UGM</h3><p>Fakultas Biologi UGM merupakan tempat perkuliahan untuk mahasiswa prodi biologi, Fakultas Biologi UGM didirikan pada tanggal 19 September 1955 berdasarkan SK Mentri Pendidikan, Pengajaran, dan Kebudayaan RI no. 53759/Kb, tertanggal 15 September 1955.</p><a href="https://maps.app.goo.gl/7j56VZvmiDDpSJmp6">Link Lokasi</a>'
+              ),
+              
+              Teknik = L.marker([-7.765190914060514, 110.37250124654118], { icon: bgnIcon }).bindPopup(
+                '<center><img src="https://ft.ugm.ac.id/wp-content/uploads/sites/31/2024/03/DSCF7793-scaled.jpg" width="300px" height="200px" title="Fakultas Teknik UGM" alt="Fakultas Teknik UGM"></center><h3>Fakultas Teknik UGM</h3><p>Fakultas Teknik UGM memiliki 15 program studi, di antaranya Arsitektur, Teknik Elektro, Teknik Geodesi, Teknik Geologi, Teknik Kimia, Teknik Mesin, Teknik Nuklir, Teknik Sipil, Teknik Industri, Teknik Fisika, Teknik Biomedis, Perencanaan Wilayah dan Kota, Teknik Sumber Daya Air, Teknologi Informasi, dan Teknik Infrastruktur Lingkungan.  </p><a href="https://maps.app.goo.gl/Ecbdt3VoJQc4bhBa9">Link Lokasi</a>'
+              ),
+              Hukum = L.marker([-7.770302489716441, 110.3811835838631], { icon: bgnIcon }).bindPopup(
+                '<center><img src="https://law.ugm.ac.id/wp-content/uploads/sites/9/2022/03/DSC00052-1024x683.jpg" width="300px" height="200px" title="Fakultas Hukum" alt="Fakultas Hukum"></center><h3>Fakultas Hukum</h3><p>Fakultas Hukum UGM adalah tempat mahasiswa hukum berkuliah, fakultas ini memiliki 2 program studi sarjana, 7 program studi pascasarjana, dan 1 program studi doktor.</p><a href="https://maps.app.goo.gl/cBAVqRK8cGx5eBCS8">Link Lokasi</a>'
+              ),
+              FIB = L.marker([-7.771396249773767, 110.37878385196937], { icon: bgnIcon }).bindPopup(
+                '<center><img src="https://fib.ugm.ac.id/wp-content/uploads/sites/10/2023/07/fib-ugm.jpg" width="300px" height="200px" title="Fakultas Ilmu Budaya" alt="Fakultas Ilmu Budaya UGM"></center><h3>Fakultas Ilmu Budaya UGM</h3><p>Fakultas Ilmu Budaya UGM merupakan tempat mahasiswa FIB melakukan perkuliahan, FIB memiliki 5 Departemen yaitu Departemen Antropologi, Departemen Arkeologi, Departemen Bahasa dan Sastra, Departemen Sejarah, Departemen Antarbudaya. </p><a href="https://maps.app.goo.gl/spX6zosCFoiSov8E9">Link Lokasi</a>'
+              ),
+              Kehutanan = L.marker([-7.766493757688632, 110.38092241954602], { icon: bgnIcon }).bindPopup(
+                '<center><img src="https://kemahasiswaan.fkt.ugm.ac.id/wp-content/uploads/sites/189/2019/08/tugu-new.jpg" width="300px" height="200px" title="Fakultas Kehutanan UGM" alt="Fakultas Kehutanan UGM"></center><h3>Fakultas Kehutanan UGM</h3><p>Fakultas Kehutanan UGM merupakan tempat mahasiswa prodi kehutanan  berkuliah, Program studi fakultas ini terbagi menjadi empat departemen, yaitu: Manajemen Hutan, Silvikultur, Teknologi Hasil Hutan, Konservasi Sumber Daya Hutan. </p><a href="https://maps.app.goo.gl/Cubs35xx97pik4YD9">Link Lokasi</a>'
+              );
+      
+            var bgn = L.layerGroup([Biologi, Teknik, Hukum, FIB, Kehutanan]);
+      
+            var osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+              maxZoom: 20,
+              attribution: "© OpenStreetMap",
+            });
+      
+            var osm2 = L.tileLayer("https://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}", {
+              maxZoom: 20,
+              attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+            });
+      
+            var map = L.map("map", {
+              measureControl: true,
+              center: [-7.77021509217966, 110.37594932746681],
+              zoom: 14,
+              layers: [osm, bgn],
+            });
+      
+      
+            var baseMaps = {
+              Peta: osm,
+              Satelit: osm2,
+            };
+      
+            var overlayMaps = {
+              Stadion: bgn,
+            };
+      
+            var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
+            var baseMaps = {
+              OpenStreetMap: osm,
+              "<span style='color: red'>OpenStreetMap.maps</span>": osm2,
+            };
+      
+            L.easyPrint({
+              title: "My awesome print button",
+              position: "topright",
+              sizeModes: ["A4Portrait", "A4Landscape"],
+            }).addTo(map);
+      
+            var graphicScale = L.control
+              .graphicScale({
+                fill: "fill",
+                doubleLine: "true",
+                showSubunits: "true",
+              })
+              .addTo(map);
+      
+          
+           
+      
+            L.Control.geocoder().addTo(map);
+          </script>
+    </div>
+    <div class="container">
+        <br />
+        <br />
+        <br />
+    </div>
+
+    <!--  Tautan ke Bootstrap JS dan jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
